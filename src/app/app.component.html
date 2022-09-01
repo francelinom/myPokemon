@@ -1,6 +1,4 @@
-<div
-  class="container"
-  *ngFor="let pokemon of listaDeNomesDoPokemon; let i = index"
->
-  <label>{{ i + 1 }} - {{ pokemon }}</label>
+<app-navbar></app-navbar>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
