@@ -7,7 +7,7 @@ import { ListPokemonService } from 'src/app/shared/services/list-pokemon.service
   styleUrls: ['./list-pokemon.component.css'],
 })
 export class ListPokemonComponent implements OnInit {
-  pokemons: any = ['Bulbasaur', 'Ivysaur', 'Charizard'];
+  pokemons: any = ['Bulbasaur', 'Ivysaur', 'Charizard', 'Charmander'];
   listaDeNomesDoPokemon: string[] = [];
   limit: number = 10;
 
@@ -18,7 +18,7 @@ export class ListPokemonComponent implements OnInit {
     this.exibirImagemPokemon();
      */
   }
-  /** 
+  /**
   listarPokemon(): void {
     this.service.listPokemon(this.limit).subscribe((listaDePokemon) => {
       this.pokemons = listaDePokemon.results;
