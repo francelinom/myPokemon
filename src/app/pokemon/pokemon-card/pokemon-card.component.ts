@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ListPokemonService } from 'src/app/shared/services/list-pokemon.service';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -8,8 +9,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PokemonCardComponent implements OnInit {
   @Input() pokemon!: string;
   @Input() numero!: number;
+  pokemonInfo: any = {};
+  nome: string = '';
 
-  constructor() {}
+  constructor(private service: ListPokemonService) {}
 
   ngOnInit(): void {}
 
@@ -25,5 +28,14 @@ export class PokemonCardComponent implements OnInit {
       s = '0' + s;
     }
     return s;
+  }
+
+  pegarPekemon(pokemon: string): any {
+    console.log(pokemon);
+    this.pokemonInfo = {};
+    this.service.listInfoPokemon(pokemon).subscribe((info: any) => {
+      console.log(info);
+      this.pokemonInfo = info;
+    });
   }
 }

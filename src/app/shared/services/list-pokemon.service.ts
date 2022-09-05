@@ -11,7 +11,7 @@ export class ListPokemonService {
   constructor(private http: HttpClient) {}
 
   listPokemon(limit: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/ability/?limit=${limit}`);
+    return this.http.get<any>(`${this.apiUrl}/pokemon?limit=${limit}`);
   }
 
   listInfoPokemon(name: string): Observable<string> {
