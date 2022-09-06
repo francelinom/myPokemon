@@ -1,12 +1,22 @@
-<div class="card m-2" style="width: 18rem;">
-  <img [src]="pegarImagemPokemon()" class="card-img-top" alt="...">
+<div class="card m-2 card-borda" style="width: 18rem">
+  <!-- <img [src]="pegarImagemPokemon()" class="card-img-top" alt="..."> -->
+  <img
+    src="https://4.bp.blogspot.com/-UYJjvmDemn0/WT3ov0R6cpI/AAAAAAAAvgE/frFGuJ4p4Ac7umWkdZZF5qTbnKdReWP2wCLcB/s1600/landscape-1456483171-pokemon2.jpg"
+    class="card-img-top"
+    alt="..."
+  />
   <div class="card-body">
     <h5 class="card-title">{{ pokemon }}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button type="button"
-    class="btn btn-primary"
-    data-bs-toggle="modal"
-    data-bs-target="#exampleModal" (click)="pegarPekemon(pokemon)">
+    <p class="card-text">
+      Clique em ver para visualizar mais detalhes sobre o pokemon.
+    </p>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      (click)="pegarPekemon(pokemon)"
+    >
       <i class="fa fa-eye"></i> Ver
     </button>
   </div>
